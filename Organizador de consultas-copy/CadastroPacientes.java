@@ -67,7 +67,34 @@ public class CadastroPacientes
     return media;
 }    
 
-    
+    public void diagnosticoMedia(){
+      String diagnostico; 
+      int totalDoencas = 0, co =0, de = 0, in =0, me = 0  ; 
+        for(int i =0; i <= pacientesVetor.length; i++){
+            diagnostico = pacientesVetor[i].getDiagnostico() ;
+            
+        
+        if(diagnostico == "Covid"){
+            co++;
+            totalDoencas++;
+        } else if (diagnostico == "Dengue") {
+            de++;
+            totalDoencas++;
+        } else if (diagnostico == "Influenza" ) {
+            in++;
+            totalDoencas++;
+        } else if (diagnostico == "Meningite") {
+            me++;
+            totalDoencas++;
+        }
+        
+        }
+        System.out.print("\n Temos um total de: " + totalDoencas + " diagnosticos." + "\n Pacientes com covid: " + ((co * 100)/totalDoencas) 
+        + "com um total de: " + co + "casos" + "\n Pacientes com Dengue: " + ((de * 100)/totalDoencas) 
+        + "com um total de: " + de + "casos"  + "\n Pacientes com Influenza: " + ((in * 100)/totalDoencas) 
+        + "com um total de: " + in + "casos"  + "\n Pacientes com Influenza: " + ((in * 100)/totalDoencas) 
+        + "com um total de: " + me + "casos"   );
+    }
    
    
    

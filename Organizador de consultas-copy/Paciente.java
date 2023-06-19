@@ -13,7 +13,7 @@ public class Paciente
     private String nome, convenio, diagnostico, cpf;
     private int telefone;
     private double numeroConsultas;
-    private String Co, De, In, Me;
+   
     
      
     public Paciente(){
@@ -27,7 +27,7 @@ public class Paciente
         diagnostico = teclado.nextLine();
         System.out.println("cpf");
         cpf = teclado.nextLine();
-        System.out.println("Quantas consultas");
+        System.out.println("Quantas consultas gostaria de marcar?");
         numeroConsultas = teclado.nextDouble();
         System.out.println("Numero de Telefone");
         telefone = teclado.nextInt();;
@@ -38,15 +38,7 @@ public class Paciente
      Também deverá possuir um método que recebe o valor de uma consulta por parâmetro e
 retorna o valor total a ser pago pelas consultas do mês para aquele paciente.    
 */
-    public String diagnostico(){
-        Scanner teclado = new Scanner(System.in);
-        diagnostico = teclado.nextLine();
-        switch (diagnostico) {
-            //case dianostico fazer isso amanha 
-        }
-        //fazer switch para as 4 doenças somando todas a uma variavel especifica
-        return diagnostico;
-    }
+    
 public double divida (double numeroConsultas){
     double  valorDivida = numeroConsultas * 100;
     

@@ -11,6 +11,6 @@ public class Aplicação
     
     Paciente bruno = new Paciente();
     System.out.print(bruno.toString());
-    System.out.print("\n" + bruno.getNome().charAt(1));
+    
     }
 }
