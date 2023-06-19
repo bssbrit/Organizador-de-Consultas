@@ -11,8 +11,9 @@ public class Paciente
     //public static void main(String[] args){
     
     private String nome, convenio, diagnostico, cpf;
-    private int telefone, numeroConsultas;
-    
+    private int telefone;
+    private double numeroConsultas;
+    private String Co, De, In, Me;
     
      
     public Paciente(){
@@ -27,7 +28,7 @@ public class Paciente
         System.out.println("cpf");
         cpf = teclado.nextLine();
         System.out.println("Quantas consultas");
-        numeroConsultas = teclado.nextInt();
+        numeroConsultas = teclado.nextDouble();
         System.out.println("Numero de Telefone");
         telefone = teclado.nextInt();;
        
@@ -37,8 +38,17 @@ public class Paciente
      Também deverá possuir um método que recebe o valor de uma consulta por parâmetro e
 retorna o valor total a ser pago pelas consultas do mês para aquele paciente.    
 */
-    public int divida (int numeroConsultas){
-    int valorDivida = numeroConsultas * 100;
+    public String diagnostico(){
+        Scanner teclado = new Scanner(System.in);
+        diagnostico = teclado.nextLine();
+        switch (diagnostico) {
+            //case dianostico fazer isso amanha 
+        }
+        //fazer switch para as 4 doenças somando todas a uma variavel especifica
+        return diagnostico;
+    }
+public double divida (double numeroConsultas){
+    double  valorDivida = numeroConsultas * 100;
     
     return valorDivida;
     };
@@ -73,8 +83,16 @@ retorna o valor total a ser pago pelas consultas do mês para aquele paciente.
     public String getCPF(){
         return cpf;
     }
-    public void setCPF (String convenio){
+    public void setCPF (String cpf){
         this.cpf= cpf;
+    }
+    
+    //set & get consultas
+    public double getnumeroConsultas(){
+        return numeroConsultas;
+    }
+    public void setnumeroConsultas (double numeroConsultas){
+        this.numeroConsultas= numeroConsultas;
     }
     
     public String toString(){
